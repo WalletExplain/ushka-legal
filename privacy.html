@@ -127,7 +127,7 @@
       <h3>2.3 在您开启 AI 服务器后可能传输的信息</h3>
       <ul>
         <li>完成多智能体分析所必需的请求数据，例如：股票代码、市场、研究深度、会话/任务状态、模型路由所需的最小元数据。</li>
-        <li>上述数据可能经加密封装的网关（如 WalletExplain / api.walletexplain.com）转发至大模型服务提供方以生成研究结果。</li>
+        <li>上述数据经 <strong>WalletExplain 网关</strong>（api.walletexplain.com）加密封装传输至 <strong>OpenAI</strong> 模型服务商，以生成研究结果；该过程仅传输完成研究所需的最小必要信息。</li>
       </ul>
       <h3>2.4 我们不会主动收集的信息</h3>
       <ul>
@@ -140,7 +140,7 @@
         <p>
           We may process account identifiers (Apple/email), research inputs (tickers, depth, screener settings),
           App Store purchase status (handled by Apple; no full card numbers), local preferences/reports,
-          and—only when AI Server is enabled—minimum request data needed for analysis via a sealed LLM gateway.
+          and—only when AI Server is enabled—minimum request data needed for analysis, transmitted via the WalletExplain gateway to OpenAI.
           We do not collect brokerage credentials, live order data, continuous precise location tracking, or IDFA for advertising.
         </p>
       </div>
@@ -165,7 +165,7 @@
       <h2>4. 第三方与数据处理 / Third Parties</h2>
       <ul>
         <li><strong>Apple</strong>：登录（Sign in with Apple）、App Store 内购/订阅、系统分享与设备安全能力由 Apple 按其政策处理。</li>
-        <li><strong>大模型 / 网关服务</strong>：当 AI 服务器开启时，分析请求可能经 WalletExplain 网关传输至模型服务商。该过程仅传输完成研究所需的最小必要信息。</li>
+        <li><strong>大模型 / 网关服务</strong>：当 AI 服务器开启时，分析请求经 <strong>WalletExplain 网关</strong>传输至 <strong>OpenAI</strong> 服务商。该过程仅传输完成研究所需的最小必要信息。OpenAI 按其自身隐私政策处理相关数据。</li>
         <li><strong>公开行情/数据源</strong>：选股与同步可能依赖公开市场数据接口；此类请求通常涉及股票代码等非敏感研究参数。</li>
         <li><strong>托管与邮件</strong>：支持沟通通过 <a href="mailto:support@walletexplain.com">support@walletexplain.com</a> 进行。</li>
       </ul>
@@ -174,8 +174,7 @@
       </p>
       <div class="en">
         <p>
-          Third parties include Apple (Sign in with Apple, IAP), the WalletExplain LLM gateway / model providers (only if AI Server is on),
-          public market-data sources, and email support. We do not share personally identifying data with unrelated parties except as needed to provide the service or as required by law.
+          Third parties include Apple (Sign in with Apple, IAP); when AI Server is enabled, analysis requests are sent via the <strong>WalletExplain gateway</strong> to <strong>OpenAI</strong> (minimum data necessary for research); plus public market-data sources and email support. We do not share personally identifying data with unrelated parties except as needed to provide the service or as required by law.
         </p>
       </div>
     </div>
