@@ -14,6 +14,7 @@
       --gold: #C6A15B;
       --line: #2A2418;
       --paper: #FFFCF5;
+      --warn: #3A2A12;
     }
     * { box-sizing: border-box; }
     body {
@@ -67,6 +68,13 @@
     .en { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
     .en p, .en li { color: var(--muted); font-size: 0.92rem; }
     .en h3 { color: #D8C9A4; font-size: 0.9rem; }
+    .notice {
+      background: var(--warn);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 0 0 18px;
+    }
     footer {
       margin-top: 28px; color: var(--muted); font-size: 0.85rem;
       border-top: 1px solid var(--line); padding-top: 16px;
@@ -79,9 +87,9 @@
     <h1>隐私政策 · Privacy Policy</h1>
     <p class="sub">
       <span class="badge">App Store</span>
-      生效日期 / Effective Date：2026-07-28<br />
+      生效日期 / Effective Date：2026-09-08（修订版 1.2.0，在 2026-07-28 版基础上更新）<br />
       适用应用 / App：USHKA（Bundle ID：com.jchen.USHKA）<br />
-      运营主体 / Operator：USHKA 个人开发者（中国境内自然人） / Individual developer of USHKA (natural person in Mainland China)
+      运营主体 / Operator：温岭市新河壹嘉软件开发工作室（个体工商户） / Wenling Xinhe Yijia Software Development Studio (sole proprietorship)
     </p>
 
     <nav class="nav" aria-label="Legal pages">
@@ -91,6 +99,29 @@
       <a href="./support.html">技术支持 Support</a>
     </nav>
 
+    <div class="card notice">
+      <p>
+        <strong>重要 / Important：</strong>
+        本 App 的产品运营者与个人信息处理者为<strong>温岭市新河壹嘉软件开发工作室（个体工商户）</strong>（下称「运营者」「开发者」或「我们」）。
+        本 App 通过 Apple Developer Program（个人会员资格）上架 App Store；该个人开发者账户持有人与前述个体工商户经营者为<strong>同一自然人</strong>。
+        个人开发者账户仅用于苹果分发与结算通道，<strong>不改变</strong>运营者与处理者的法律身份。
+        本 App 面向中国大陆用户设计与合规落地，提供个人股票学习与研究工具；即使同步上架海外 App Store，个人信息处理仍以中华人民共和国法律（含《个人信息保护法》）及本政策为准。
+        请在使用前仔细阅读本政策与《用户协议》《研究免责声明》。本政策与《用户协议》共同构成您与运营者之间的约定。
+        <strong>同意全部条款后，请继续使用本 App；如不同意全部或部分条款，请勿使用，并请立即停止使用、卸载本应用。</strong>
+        同意、登录或继续使用即表示您已理解并接受上述文件。
+        在法律允许的最大范围内，<strong>运营者及开发者就您使用或无法使用本 App 不承担任何责任，亦不提供任何赔偿、补偿、退款（Apple 法定/政策退款程序除外且由 Apple 处理）或其他金钱给付</strong>。
+      </p>
+      <div class="en">
+        <p>
+          The operator and personal-information handler is <strong>Wenling Xinhe Yijia Software Development Studio (sole proprietorship)</strong>.
+          The App is distributed via the Apple Developer Program (individual membership); the individual Apple Developer account holder and the sole proprietor are the <strong>same natural person</strong>.
+          Even if also listed on overseas App Stores, personal-information processing remains governed by the laws of the People’s Republic of China (including the PIPL) and this Policy.
+          <strong>If you agree to all terms, continue using the App; if you disagree in whole or in part, do not use the App and uninstall it.</strong>
+          To the maximum extent permitted by law, the operator and developer assume <strong>no liability</strong> and provide no compensation or refunds except refunds approved and processed by Apple under Apple’s policies.
+        </p>
+      </div>
+    </div>
+
     <div class="card">
       <h2>1. 概述 / Overview</h2>
       <p>
@@ -99,13 +130,13 @@
       </p>
       <p>
         本政策说明我们如何收集、使用、存储、共享与保护与您相关的信息。我们采取「本地优先」设计：多数研究记录默认保存在您的设备本地；
-        仅在您主动开启「AI 服务器」等功能时，才会为完成分析所需向服务器传输必要信息。
+        仅在您主动开启「AI 服务器」并允许 AI 数据共享等功能时，才会为完成分析所需向相关服务传输必要信息。
       </p>
       <div class="en">
         <p>
           USHKA is a personal research tool for multi-agent stock analysis (CN/HK/US markets).
           It is <strong>not investment advice</strong>, does <strong>not</strong> access brokerage accounts, and does <strong>not</strong> place live trades.
-          We follow a local-first design: most research data stays on your device; necessary data is sent to servers only when you enable features such as “AI Server”.
+          We follow a local-first design: most research data stays on your device; necessary data is sent only when you enable features such as “AI Server” and allow AI data sharing.
         </p>
       </div>
     </div>
@@ -118,22 +149,25 @@
         <li><strong>研究输入</strong>：股票代码、市场选择、研究深度、选股条件、任务相关设置等。</li>
         <li><strong>订阅与内购相关信息</strong>：通过 Apple App Store / StoreKit 完成的订阅或积分包购买记录由 Apple 处理；我们可能接收交易状态、产品标识等用于恢复权益所必需的信息，但<strong>不会收集或存储您的完整支付卡号</strong>。应用内参考标价（USD，以 App Store 实际展示为准）：Basic 月订 <strong>$11.99</strong>（含 4 次分析）、Deep Research 月订 <strong>$29.99</strong>（含 10 次，含 PDF）、Annual <strong>$249.99</strong>（含 120 次/年，含 PDF）；积分包 Starter <strong>$2.99</strong>（1 次）、Pack <strong>$11.99</strong>（4 次）、Bundle <strong>$27.99</strong>（10 次）。1 积分 = 1 次完整多智能体分析。</li>
         <li><strong>反馈信息</strong>：您通过支持邮箱主动发送的邮件内容与联系方式。</li>
+        <li><strong>头像（可选）</strong>：若您主动使用相机或相册设置个人头像，相关图片保存在您的设备本地；我们不会将其用于广告。</li>
       </ul>
       <h3>2.2 设备本地存储的信息</h3>
       <ul>
-        <li>同意状态、语言偏好、AI 服务器开关、AI 数据共享授权（允许/不允许）、自选列表、分析报告与任务进度缓存、模拟交易本地数据、订阅权益本地标记等。</li>
+        <li>同意状态、语言偏好、AI 服务器开关、AI 数据共享授权（允许/不允许）、通知偏好、自选列表、分析报告与任务进度缓存、模拟交易本地数据、订阅权益本地标记、本机头像等。</li>
         <li>为保护敏感配置，部分密钥类信息可能使用系统安全存储（如 Keychain / Secure Store）保存。</li>
         <li>若您使用系统安全能力保护本机敏感配置，相关生物特征/设备安全数据由操作系统处理，我们无法获取原始生物特征。</li>
       </ul>
       <h3>2.3 在您允许 AI 数据共享并开启 AI 服务器后可能传输的信息</h3>
       <ul>
         <li>完成多智能体分析所必需的请求数据，例如：股票代码、市场、研究深度、会话/任务状态、分析提示与中间文本、模型路由所需的最小元数据。</li>
-        <li>上述数据经 <strong>WalletExplain 网关</strong>（api.walletexplain.com）加密封装传输至 <strong>OpenAI</strong> 模型服务商，以生成研究结果；该过程仅传输完成研究所需的最小必要信息。</li>
-        <li>首次发送前，应用内会展示全屏说明（数据类型、接收方），并提供「允许 / 不允许」；选择「不允许」时不会向 WalletExplain 网关或 OpenAI 发送研究数据。您可在「我的 → AI 数据共享」随时查看或撤回授权。</li>
+        <li>上述数据<strong>直接发送至 OpenAI 官方接口</strong>（api.openai.com）以生成研究结果；该过程仅传输完成研究所需的最小必要信息，<strong>不经第三方 LLM 网关转发</strong>。</li>
+        <li>研究任务编排可由运营者部署的分析引擎（如 <code>api.walletexplain.com/ushka</code>）处理；大模型调用仍直连 OpenAI。</li>
+        <li>首次发送前，应用内会展示全屏说明（数据类型、接收方），并提供「允许 / 不允许」；选择「不允许」时不会向 OpenAI 发送研究数据。您可在「我的 → AI 数据共享」随时查看或撤回授权。</li>
       </ul>
       <h3>2.4 我们不会主动收集的信息</h3>
       <ul>
-        <li>精确地理位置持续追踪、通讯录、相册（除非您主动使用系统分享将文件保存/发送到第三方 App）。</li>
+        <li>精确地理位置持续追踪、通讯录（除非您主动使用系统分享将文件保存/发送到第三方 App）。</li>
+        <li>相册/相机：仅在您主动设置头像时按系统权限使用；不以其他目的扫描相册。</li>
         <li>券商账户、资金账户、实盘交易指令。</li>
         <li>用于跨 App 广告追踪的 IDFA（本应用不以广告追踪为目的）。</li>
       </ul>
@@ -141,8 +175,9 @@
         <h3>English summary</h3>
         <p>
           We may process account identifiers (Apple/email), research inputs (tickers, depth, screener settings),
-          App Store purchase status (handled by Apple; no full card numbers), local preferences/reports,
-          and—only after you Allow AI data sharing and enable AI Server—minimum request data needed for analysis, transmitted via the WalletExplain gateway to OpenAI.
+          App Store purchase status (handled by Apple; no full card numbers), local preferences/reports/avatar,
+          and—only after you Allow AI data sharing and enable AI Server—minimum request data needed for analysis, sent <strong>directly to OpenAI (api.openai.com)</strong>.
+          An analysis engine (e.g. api.walletexplain.com/ushka) may orchestrate tasks; LLM calls are not routed through a third-party LLM gateway.
           Reference USD list prices (App Store display prevails): Basic <strong>$11.99</strong>/mo (4 analyses), Deep <strong>$29.99</strong>/mo (10 + PDF), Annual <strong>$249.99</strong>/yr (120 + PDF); credit packs <strong>$2.99</strong> / <strong>$11.99</strong> / <strong>$27.99</strong> (1 / 4 / 10). One credit = one full analysis.
           Before the first send, the app shows an in-app Allow / Don’t Allow disclosure listing data types and recipients.
           We do not collect brokerage credentials, live order data, continuous precise location tracking, or IDFA for advertising.
@@ -154,7 +189,7 @@
       <h2>3. 信息如何使用 / How We Use Information</h2>
       <ul>
         <li>提供、维护与改进 USHKA 的研究、选股、任务队列、报告展示与 PDF 导出等功能；</li>
-        <li>在您开启 AI 服务器后，生成多智能体分析结果；</li>
+        <li>在您开启 AI 服务器并允许数据共享后，调用 OpenAI 生成多智能体分析结果；</li>
         <li>验证订阅/积分包权益、防止滥用；</li>
         <li>回应支持请求、处理投诉与安全事件；</li>
         <li>履行法律法规要求，或保护用户、开发者及公众的合法权益。</li>
@@ -168,17 +203,32 @@
     <div class="card">
       <h2>4. 第三方与数据处理 / Third Parties</h2>
       <ul>
-        <li><strong>Apple</strong>：登录（Sign in with Apple）、App Store 内购/订阅、系统分享与设备安全能力由 Apple 按其政策处理。</li>
-        <li><strong>大模型 / 网关服务</strong>：当 AI 服务器开启时，分析请求经 <strong>WalletExplain 网关</strong>传输至 <strong>OpenAI</strong> 服务商。该过程仅传输完成研究所需的最小必要信息。OpenAI 按其自身隐私政策处理相关数据。</li>
+        <li><strong>Apple</strong>：登录（Sign in with Apple）、App Store 内购/订阅、系统通知、相册/相机（仅头像）、系统分享与设备安全能力由 Apple 按其政策处理。</li>
+        <li><strong>OpenAI</strong>：当 AI 服务器开启且您允许 AI 数据共享时，分析请求<strong>直接发送至 OpenAI（api.openai.com）</strong>。该过程仅传输完成研究所需的最小必要信息。OpenAI 按其自身隐私政策处理相关数据。</li>
+        <li><strong>分析引擎</strong>：研究流程编排可使用运营者部署的引擎（如 api.walletexplain.com/ushka）；其不等于 LLM 网关。</li>
         <li><strong>公开行情/数据源</strong>：选股与同步可能依赖公开市场数据接口；此类请求通常涉及股票代码等非敏感研究参数。</li>
-        <li><strong>托管与邮件</strong>：支持沟通通过 <a href="mailto:support@walletexplain.com">support@walletexplain.com</a> 进行。</li>
+        <li><strong>托管与邮件</strong>：支持沟通通过 <a href="mailto:support@walletexplain.com">support@walletexplain.com</a> 进行；本法律页托管于 GitHub Pages（walletexplain.github.io/ushka-legal/）。</li>
       </ul>
       <p>
         第三方有其独立的隐私政策。除为提供服务所必需或法律要求外，我们不会与无关第三方共享可用于识别您个人身份的信息。
       </p>
       <div class="en">
         <p>
-          Third parties include Apple (Sign in with Apple, IAP); when AI Server is enabled, analysis requests are sent via the <strong>WalletExplain gateway</strong> to <strong>OpenAI</strong> (minimum data necessary for research); plus public market-data sources and email support. We do not share personally identifying data with unrelated parties except as needed to provide the service or as required by law.
+          Third parties include Apple (Sign in with Apple, IAP, notifications, optional avatar media); when AI Server is enabled and you allow sharing, analysis requests go <strong>directly to OpenAI</strong> (minimum data necessary for research); plus an optional analysis engine for orchestration, public market-data sources, and email support. We do not share personally identifying data with unrelated parties except as needed to provide the service or as required by law.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4A. 订阅、积分与退款说明 / Subscriptions, Credits &amp; Refunds</h2>
+      <p>部分功能需<strong>自动续期订阅</strong>或<strong>一次性消耗型积分包</strong>。支付由 Apple 处理；价格以 App Store 展示为准。</p>
+      <ul>
+        <li><strong>自动续期订阅：</strong>按计费周期自动续订，直至您在 Apple ID 订阅管理中取消。取消后，当前已付费周期内的权益通常可继续使用至该周期结束。订阅相关退款仅由 Apple 按其政策处理；运营者及开发者不在 Apple 程序之外另行退款。Apple 若核准，退还金额通常不超过该笔订阅交易的实付价款。</li>
+        <li><strong>一次性消耗型积分包：</strong>购买成功并向您账户发放积分后，相关数字内容即视为已交付。积分一经使用即不可恢复。对已交付或已消耗的积分，运营者及开发者<strong>不提供退款、折现或现金补偿</strong>。您仍可通过 Apple 渠道提出退款请求，是否核准及金额以 Apple 政策及适用法律为准；运营者无法代为办理。</li>
+      </ul>
+      <div class="en">
+        <p>
+          Auto-renewable subscriptions may be cancelled in Apple ID settings; access usually continues until the end of the paid period. Consumable credit packs are considered delivered when credits are granted; used credits are non-restorable. The operator/developer does not provide refunds outside Apple’s process. Apple-approved refunds are typically limited to the amount actually paid for that transaction.
         </p>
       </div>
     </div>
@@ -188,15 +238,15 @@
       <ul>
         <li><strong>本地优先</strong>：研究记录、自选与模拟交易等默认保存在您的设备。</li>
         <li><strong>传输保护</strong>：与服务器通信采用 HTTPS 等行业常用加密传输。</li>
-        <li><strong>最小化</strong>：仅处理实现功能所必需的数据；AI 相关传输可随时通过关闭「AI 服务器」停止新增传输。</li>
-        <li><strong>跨境</strong>：若您使用 AI 服务器或国际行情源，相关处理可能涉及中国境外的基础设施或服务提供方。我们将在合法、正当、必要原则下处理，并要求相关方采取合理保护措施。</li>
+        <li><strong>最小化</strong>：仅处理实现功能所必需的数据；AI 相关传输可随时通过关闭「AI 服务器」或撤回 AI 数据共享停止新增传输。</li>
+        <li><strong>跨境</strong>：若您使用 AI 服务器（OpenAI）或国际行情源，相关处理可能涉及中国境外的基础设施或服务提供方。我们将在合法、正当、必要原则下处理，并要求相关方采取合理保护措施。</li>
       </ul>
       <p class="muted">
         请理解：任何安全措施都无法保证绝对安全。若发生可能影响您权益的安全事件，我们将依法及时告知（如适用）。
       </p>
       <div class="en">
         <p>
-          Local-first storage, HTTPS in transit, and data minimization apply. Using AI Server or certain market-data providers may involve processing outside Mainland China.
+          Local-first storage, HTTPS in transit, and data minimization apply. Using AI Server (OpenAI) or certain market-data providers may involve processing outside Mainland China.
           No method of transmission or storage is 100% secure.
         </p>
       </div>
@@ -261,6 +311,7 @@
         <li>应用内分析、辩论时间线、报告与 PDF 导出内容均由算法/AI 生成或汇总，仅供个人学习研究参考。</li>
         <li>不构成投资建议、要约、招揽或任何形式的投顾服务。</li>
         <li>您应独立判断并自行承担投资风险。</li>
+        <li>在法律允许的最大范围内，因依赖或使用上述内容产生的任何损失，运营者及开发者<strong>不承担任何责任，亦不提供任何赔偿或补偿</strong>。</li>
       </ul>
     </div>
 
@@ -269,29 +320,36 @@
       <p>
         我们可能适时更新本政策。更新后将在本页面发布，并视情况在应用内提示。
         若更新导致处理个人信息的目的、方式或类型发生重大变化，我们将依法重新取得同意（如需要）。
+        若您不同意更新后的政策，请停止使用并删除账号与本机数据。
       </p>
     </div>
 
     <div class="card">
       <h2>12. 联系我们 / Contact</h2>
       <p>
-        运营主体：USHKA 个人开发者（中国）<br />
+        运营主体 / 个人信息处理者：温岭市新河壹嘉软件开发工作室（个体工商户）<br />
+        Apple 上架：Apple Developer Program 个人会员；个人开发者账户持有人与前述个体工商户经营者为同一自然人<br />
         支持邮箱：<a href="mailto:support@walletexplain.com">support@walletexplain.com</a><br />
-        产品网站相关域名：walletexplain.com（用于网关与支持联络）
+        本页：<code>https://walletexplain.github.io/ushka-legal/privacy.html</code><br />
+        分析引擎相关域名：api.walletexplain.com（研究编排；LLM 直连 OpenAI）
       </p>
       <p class="muted">
-        本政策中的“我们”指上述个人开发者本人。因个人开发者运营，部分企业级合规能力有限，但我们将在合理范围内采取保护措施并响应合法请求。
+        本政策中的「我们」「运营者」「开发者」均指上述主体及其同一自然人经营者。
+        <strong>同意全部条款请继续使用本 App；不同意请勿使用并请卸载。</strong>
+        在法律允许的最大范围内，运营者及开发者<strong>不承担任何责任，亦不提供任何赔偿或补偿</strong>（Apple 退款程序除外且由 Apple 处理）。
       </p>
       <div class="en">
         <p>
-          Operator: individual developer of USHKA in Mainland China.<br />
-          Email: support@walletexplain.com
+          Operator / personal-information handler: Wenling Xinhe Yijia Software Development Studio (sole proprietorship).<br />
+          Apple Developer Program individual membership; account holder is the same natural person as the sole proprietor.<br />
+          Email: support@walletexplain.com<br />
+          If you agree, continue using the App; if you disagree, do not use it. To the maximum extent permitted by law, the operator and developer assume no liability except Apple-processed refunds.
         </p>
       </div>
     </div>
 
     <footer>
-      © 2026 USHKA · Individual developer (China). See also
+      © 2026 温岭市新河壹嘉软件开发工作室（个体工商户） · USHKA. See also
       <a href="./eula.html">EULA</a> and
       <a href="./support.html">Support</a>.
     </footer>
