@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,18 +8,26 @@
   <meta name="description" content="USHKA Research Disclaimer / 研究免责声明" />
   <style>
     :root {
-      --bg: #0A0908; --card: #141210; --ink: #F4EFE3; --muted: #A89B82;
-      --gold: #C6A15B; --line: #2A2418;
+      --bg: #0A0908;
+      --card: #141210;
+      --ink: #F4EFE3;
+      --muted: #A89B82;
+      --gold: #C6A15B;
+      --line: #2A2418;
+      --paper: #FFFCF5;
+      --warn: #3A2A12;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
       background: linear-gradient(180deg, #120F0B 0%, var(--bg) 40%);
-      color: var(--ink); line-height: 1.65; font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 15px;
     }
     .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
-    .brand { color: var(--gold); font-weight: 700; }
+    .brand { color: var(--gold); font-weight: 700; letter-spacing: 0.4px; }
     h1 { font-size: 1.55rem; margin: 8px 0 6px; }
     .sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; }
     .nav {
@@ -26,20 +35,44 @@
       margin: 0 0 28px; padding-bottom: 16px; border-bottom: 1px solid var(--line);
     }
     .nav a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
+    .nav a:hover { text-decoration: underline; }
     .card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 12px; padding: 18px 18px 8px; margin-bottom: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 18px 8px;
+      margin-bottom: 18px;
     }
     h2 {
-      font-size: 1.05rem; color: var(--gold); margin: 0 0 10px;
-      border-bottom: 1px solid var(--line); padding-bottom: 6px;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin: 0 0 10px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
     }
     p, li { color: #E8DFCC; }
     ul { padding-left: 1.2em; margin: 8px 0 12px; }
     li { margin-bottom: 6px; }
     .muted { color: var(--muted); }
+    .badge {
+      display: inline-block;
+      background: rgba(198,161,91,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 12px;
+      margin-right: 6px;
+    }
     .en { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
     .en p, .en li { color: var(--muted); font-size: 0.92rem; }
+    .notice {
+      background: var(--warn);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 0 0 18px;
+    }
     .warn {
       background: rgba(198,161,91,0.08);
       border: 1px solid var(--gold);
@@ -60,17 +93,41 @@
     <div class="brand">.USHKA</div>
     <h1>研究免责声明 · Research Disclaimer</h1>
     <p class="sub">
-      生效日期 / Effective：2026-07-27<br />
-      适用应用 / App：USHKA（com.jchen.USHKA）<br />
-      运营主体：USHKA 个人开发者（中国）
+      <span class="badge">App Store</span>
+      生效日期 / Effective Date：2026-09-08（修订版 1.2.0，在 2026-07-27 版基础上更新）<br />
+      适用应用 / App：USHKA（Bundle ID：com.jchen.USHKA）<br />
+      运营主体 / Operator：温岭市新河壹嘉软件开发工作室（个体工商户） / Wenling Xinhe Yijia Software Development Studio (sole proprietorship)
     </p>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Legal pages">
       <a href="./privacy.html">隐私政策 Privacy</a>
       <a href="./eula.html">用户协议 EULA</a>
-      <a href="./disclaimer.html">研究免责 Disclaimer</a>
+      <a href="./disclaimer.html">免责声明 Disclaimer</a>
       <a href="./support.html">技术支持 Support</a>
     </nav>
+
+    <div class="card notice">
+      <p>
+        <strong>重要 / Important：</strong>
+        本 App 的产品运营者与个人信息处理者为<strong>温岭市新河壹嘉软件开发工作室（个体工商户）</strong>（下称「运营者」「开发者」或「我们」）。
+        本 App 通过 Apple Developer Program（个人会员资格）上架 App Store；该个人开发者账户持有人与前述个体工商户经营者为<strong>同一自然人</strong>。
+        个人开发者账户仅用于苹果分发与结算通道，<strong>不改变</strong>运营者与处理者的法律身份。
+        本 App 面向中国大陆用户设计与合规落地，提供个人股票学习与研究工具；即使同步上架海外 App Store，本免责声明及个人信息处理仍以中华人民共和国法律（含《个人信息保护法》）及《用户协议》《隐私政策》为准。
+        请在使用前仔细阅读本免责声明与《用户协议》《隐私政策》。上述文件共同构成您与运营者之间的约定。
+        <strong>同意全部条款后，请继续使用本 App；如不同意全部或部分条款，请勿使用，并请立即停止使用、卸载本应用。</strong>
+        同意、登录或继续使用即表示您已理解并接受上述文件。
+        在法律允许的最大范围内，<strong>运营者及开发者就您使用或无法使用本 App 不承担任何责任，亦不提供任何赔偿、补偿、退款（Apple 法定/政策退款程序除外且由 Apple 处理）或其他金钱给付</strong>。
+      </p>
+      <div class="en">
+        <p>
+          The operator and personal-information handler is <strong>Wenling Xinhe Yijia Software Development Studio (sole proprietorship)</strong>.
+          The App is distributed via the Apple Developer Program (individual membership); the individual Apple Developer account holder and the sole proprietor are the <strong>same natural person</strong>.
+          Even if also listed on overseas App Stores, this Disclaimer and personal-information processing remain governed by the laws of the People’s Republic of China (including the PIPL) and the EULA / Privacy Policy.
+          <strong>If you agree to all terms, continue using the App; if you disagree in whole or in part, do not use the App and uninstall it.</strong>
+          To the maximum extent permitted by law, the operator and developer assume <strong>no liability</strong> and provide no compensation or refunds except refunds approved and processed by Apple under Apple’s policies.
+        </p>
+      </div>
+    </div>
 
     <div class="warn">
       <strong>重要：</strong>USHKA 提供的全部分析、辩论、报告与导出内容仅供个人学习与研究参考，
@@ -82,12 +139,12 @@
       <ul>
         <li>USHKA 是多智能体研究工具，输出由软件算法与人工智能模型生成或汇总。</li>
         <li>内容可能不准确、不完整、延迟或过时，不保证任何特定结果。</li>
-        <li>公开行情与第三方数据可能存在错误或中断，开发者不因此承担投资损失责任。</li>
+        <li>公开行情与第三方数据可能存在错误或中断，运营者及开发者不因此承担投资损失责任，亦不提供任何赔偿或补偿。</li>
       </ul>
       <div class="en">
         <p>
           USHKA is a multi-agent research tool. Outputs are AI/software-generated, may be inaccurate or outdated,
-          and are for personal learning only — not investment advice.
+          and are for personal learning only — not investment advice. The operator and developer are not liable for investment losses.
         </p>
       </div>
     </div>
@@ -121,13 +178,16 @@
     <div class="card">
       <h2>4. AI 与数据传输 / AI Processing</h2>
       <ul>
-        <li>当您开启「AI 服务器」时，分析请求经 WalletExplain 网关传输至 OpenAI 服务商处理。</li>
-        <li>AI 输出可能出现幻觉或偏差；关闭 AI 服务器后，将不再向该链路发送新的分析请求。</li>
+        <li>当您开启「AI 服务器」并允许 AI 数据共享时，分析请求<strong>直接发送至 OpenAI 官方接口</strong>（api.openai.com）处理，仅传输完成研究所需的最小必要信息，<strong>不经第三方 LLM 网关转发</strong>。</li>
+        <li>研究任务编排可由运营者部署的分析引擎（如 <code>api.walletexplain.com/ushka</code>）处理；大模型调用仍直连 OpenAI。</li>
+        <li>AI 输出可能出现幻觉或偏差；关闭 AI 服务器或撤回 AI 数据共享后，将不再向该链路发送新的分析请求。</li>
+        <li>网络、分析引擎或 OpenAI 服务故障可能导致分析失败或延迟；运营者及开发者不因此承担赔偿责任（Apple 退款程序除外且由 Apple 处理）。</li>
       </ul>
       <div class="en">
         <p>
-          When AI Server is enabled, requests go via the WalletExplain gateway to OpenAI.
-          AI outputs may contain errors; disable AI Server to stop new analysis requests.
+          When AI Server is enabled and you allow AI data sharing, requests are sent <strong>directly to OpenAI</strong> (api.openai.com)—not via a third-party LLM gateway.
+          An analysis engine (e.g. api.walletexplain.com/ushka) may orchestrate tasks; LLM calls remain direct to OpenAI.
+          AI outputs may contain errors; disable AI Server or deny AI data sharing to stop new analysis requests.
         </p>
       </div>
     </div>
@@ -138,20 +198,31 @@
         <li>报告 PDF 导出、系统分享内容同样适用本免责声明。</li>
         <li>您向外转发研究报告时，应自行遵守适用法律法规，并避免误导他人将其视为投资建议。</li>
       </ul>
+      <div class="en">
+        <p>
+          PDF exports and system-shared reports are covered by this Disclaimer. You must comply with applicable law when forwarding research and must not present it as investment advice.
+        </p>
+      </div>
     </div>
 
     <div class="card">
       <h2>6. 责任限制 / Limitation</h2>
       <p>
         在适用法律允许的最大范围内，因依赖或使用 USHKA 研究输出而产生的任何直接或间接损失
-        （包括但不限于投资亏损、数据丢失、机会成本），个人开发者不承担责任。
+        （包括但不限于投资亏损、数据丢失、机会成本），运营者及开发者<strong>不承担责任</strong>，亦不提供任何赔偿、补偿、退款（Apple 法定/政策退款程序除外且由 Apple 处理）或其他金钱给付。
         更完整的许可与责任条款见 <a href="./eula.html">用户协议（EULA）</a>；
-        个人信息处理见 <a href="./privacy.html">隐私政策</a>。
+        个人信息处理见 <a href="./privacy.html">隐私政策</a>；
+        订阅与积分退款说明见 <a href="./support.html">技术支持</a> 与用户协议。
+      </p>
+      <p>
+        <strong>同意全部条款请继续使用本 App；不同意请勿使用并请卸载。</strong>
       </p>
       <div class="en">
         <p>
-          To the maximum extent permitted by law, the individual developer is not liable for losses arising from reliance on research outputs.
-          See the EULA and Privacy Policy for full terms.
+          To the maximum extent permitted by law, the operator and developer are not liable for losses arising from reliance on research outputs,
+          and provide no compensation or refunds except refunds approved and processed by Apple.
+          See the EULA, Privacy Policy, and Support page for full terms.
+          If you agree, continue using the App; if you disagree, do not use it and uninstall.
         </p>
       </div>
     </div>
@@ -159,13 +230,29 @@
     <div class="card">
       <h2>7. 联系 / Contact</h2>
       <p>
+        运营主体 / 个人信息处理者：温岭市新河壹嘉软件开发工作室（个体工商户）<br />
+        Apple 上架：Apple Developer Program 个人会员；个人开发者账户持有人与前述个体工商户经营者为同一自然人<br />
         支持邮箱：<a href="mailto:support@walletexplain.com">support@walletexplain.com</a><br />
-        技术支持页：<a href="./support.html">support.html</a>
+        技术支持页：<a href="./support.html">support.html</a><br />
+        本页：<code>https://walletexplain.github.io/ushka-legal/disclaimer.html</code><br />
+        分析引擎相关域名：api.walletexplain.com（研究编排；LLM 直连 OpenAI）
       </p>
+      <p class="muted">
+        本免责声明中的「我们」「运营者」「开发者」均指上述主体及其同一自然人经营者。
+        支持邮件通常在 <strong>15 个工作日</strong>内回复（中国时区 UTC+8）；请尽量附上设备型号、iOS 版本、App 版本、问题截图与复现步骤。
+      </p>
+      <div class="en">
+        <p>
+          Operator: Wenling Xinhe Yijia Software Development Studio (sole proprietorship).<br />
+          Email: support@walletexplain.com<br />
+          We typically reply within 15 business days (UTC+8).
+        </p>
+      </div>
     </div>
 
     <footer>
-      © 2026 USHKA · Research tool only · Not investment advice.
+      © 2026 温岭市新河壹嘉软件开发工作室（个体工商户） · USHKA · Research tool only · Not investment advice.
+      See also <a href="./eula.html">EULA</a> and <a href="./privacy.html">Privacy</a>.
     </footer>
   </div>
 </body>
