@@ -4,20 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>USHKA EULA · 最终用户许可协议 / 用户协议</title>
+  <meta name="description" content="USHKA EULA / 用户协议 — required for App Store listing" />
   <style>
     :root {
-      --bg: #0A0908; --card: #141210; --ink: #F4EFE3; --muted: #A89B82;
-      --gold: #C6A15B; --line: #2A2418; --paper: #FFFCF5;
+      --bg: #0A0908;
+      --card: #141210;
+      --ink: #F4EFE3;
+      --muted: #A89B82;
+      --gold: #C6A15B;
+      --line: #2A2418;
+      --paper: #FFFCF5;
+      --warn: #3A2A12;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
       background: linear-gradient(180deg, #120F0B 0%, var(--bg) 40%);
-      color: var(--ink); line-height: 1.65; font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 15px;
     }
     .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
-    .brand { color: var(--gold); font-weight: 700; }
+    .brand { color: var(--gold); font-weight: 700; letter-spacing: 0.4px; }
     h1 { font-size: 1.55rem; margin: 8px 0 6px; }
     .sub { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; }
     .nav {
@@ -25,24 +34,44 @@
       margin: 0 0 28px; padding-bottom: 16px; border-bottom: 1px solid var(--line);
     }
     .nav a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
+    .nav a:hover { text-decoration: underline; }
     .card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 12px; padding: 18px 18px 8px; margin-bottom: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 18px 8px;
+      margin-bottom: 18px;
     }
     h2 {
-      font-size: 1.05rem; color: var(--gold); margin: 0 0 10px;
-      border-bottom: 1px solid var(--line); padding-bottom: 6px;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin: 0 0 10px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
     }
     p, li { color: #E8DFCC; }
     ul { padding-left: 1.2em; margin: 8px 0 12px; }
     li { margin-bottom: 6px; }
     .muted { color: var(--muted); }
+    .badge {
+      display: inline-block;
+      background: rgba(198,161,91,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 12px;
+      margin-right: 6px;
+    }
     .en { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
     .en p, .en li { color: var(--muted); font-size: 0.92rem; }
     a { color: var(--gold); }
-    footer {
-      margin-top: 28px; color: var(--muted); font-size: 0.85rem;
-      border-top: 1px solid var(--line); padding-top: 16px;
+    .notice {
+      background: var(--warn);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 0 0 18px;
     }
     .warn {
       background: rgba(198,161,91,0.08);
@@ -52,6 +81,10 @@
       margin-bottom: 18px;
       color: #F0E2C0;
     }
+    footer {
+      margin-top: 28px; color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--line); padding-top: 16px;
+    }
   </style>
 </head>
 <body>
@@ -59,17 +92,41 @@
     <div class="brand">.USHKA</div>
     <h1>最终用户许可协议（EULA）/ 用户协议</h1>
     <p class="sub">
-      生效日期 / Effective：2026-07-28<br />
-      许可方 / Licensor：USHKA 个人开发者（中国境内自然人）<br />
-      应用 / App：USHKA（com.jchen.USHKA）
+      <span class="badge">App Store</span>
+      生效日期 / Effective Date：2026-09-08（修订版 1.2.0，在 2026-07-28 版基础上更新）<br />
+      适用应用 / App：USHKA（Bundle ID：com.jchen.USHKA）<br />
+      许可方 / 运营主体 / Licensor &amp; Operator：温岭市新河壹嘉软件开发工作室（个体工商户） / Wenling Xinhe Yijia Software Development Studio (sole proprietorship)
     </p>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Legal pages">
       <a href="./privacy.html">隐私政策 Privacy</a>
       <a href="./eula.html">用户协议 EULA</a>
       <a href="./disclaimer.html">免责声明 Disclaimer</a>
       <a href="./support.html">技术支持 Support</a>
     </nav>
+
+    <div class="card notice">
+      <p>
+        <strong>重要 / Important：</strong>
+        本 App 的产品运营者、许可方与个人信息处理者为<strong>温岭市新河壹嘉软件开发工作室（个体工商户）</strong>（下称「运营者」「许可方」「开发者」或「我们」）。
+        本 App 通过 Apple Developer Program（个人会员资格）上架 App Store；该个人开发者账户持有人与前述个体工商户经营者为<strong>同一自然人</strong>。
+        个人开发者账户仅用于苹果分发与结算通道，<strong>不改变</strong>运营者与许可方的法律身份。
+        本 App 面向中国大陆用户设计与合规落地，提供个人股票学习与研究工具；即使同步上架海外 App Store，本协议及个人信息处理仍以中华人民共和国法律（含《个人信息保护法》）及本协议、《隐私政策》为准。
+        请在使用前仔细阅读本协议与《隐私政策》《研究免责声明》。本协议与《隐私政策》共同构成您与运营者之间的约定。
+        <strong>同意全部条款后，请继续使用本 App；如不同意全部或部分条款，请勿使用，并请立即停止使用、卸载本应用。</strong>
+        同意、登录或继续使用即表示您已理解并接受上述文件。
+        在法律允许的最大范围内，<strong>运营者及开发者就您使用或无法使用本 App 不承担任何责任，亦不提供任何赔偿、补偿、退款（Apple 法定/政策退款程序除外且由 Apple 处理）或其他金钱给付</strong>。
+      </p>
+      <div class="en">
+        <p>
+          The operator, licensor, and personal-information handler is <strong>Wenling Xinhe Yijia Software Development Studio (sole proprietorship)</strong>.
+          The App is distributed via the Apple Developer Program (individual membership); the individual Apple Developer account holder and the sole proprietor are the <strong>same natural person</strong>.
+          Even if also listed on overseas App Stores, this EULA and personal-information processing remain governed by the laws of the People’s Republic of China (including the PIPL) and this Agreement / the Privacy Policy.
+          <strong>If you agree to all terms, continue using the App; if you disagree in whole or in part, do not use the App and uninstall it.</strong>
+          To the maximum extent permitted by law, the operator and developer assume <strong>no liability</strong> and provide no compensation or refunds except refunds approved and processed by Apple under Apple’s policies.
+        </p>
+      </div>
+    </div>
 
     <div class="warn">
       <strong>重要提示：</strong>USHKA 仅为个人学习与研究工具，<strong>不构成投资建议</strong>，
@@ -80,11 +137,15 @@
     <div class="card">
       <h2>1. 协议接受 / Acceptance</h2>
       <p>
-        您下载、安装或使用 USHKA，即表示同意受本 EULA 约束。若不同意，请勿使用并卸载应用。
+        您下载、安装、登录或使用 USHKA，即表示同意受本 EULA 及《隐私政策》《研究免责声明》约束。
+        <strong>同意全部条款后，请继续使用本 App；如不同意全部或部分条款，请勿使用，并请立即停止使用、卸载本应用。</strong>
         若您代表他人使用，您保证已获授权。
       </p>
       <div class="en">
-        <p>By downloading, installing, or using USHKA, you agree to this EULA. If you do not agree, do not use the app.</p>
+        <p>
+          By downloading, installing, signing in, or using USHKA, you agree to this EULA and the Privacy Policy / Disclaimer.
+          If you agree, continue using the App; if you do not agree, do not use the App and uninstall it.
+        </p>
       </div>
     </div>
 
@@ -128,7 +189,7 @@
     <div class="card">
       <h2>4. 订阅、积分与退款 / Subscriptions &amp; Credits</h2>
       <ul>
-        <li>部分功能（如深度研究额度、PDF 导出权益、AI 积分包）需要付费订阅或消耗型内购。</li>
+        <li>部分功能（如深度研究额度、PDF 导出权益、AI 积分包）需要<strong>自动续期订阅</strong>或<strong>一次性消耗型内购（积分包）</strong>。</li>
         <li>支付由 Apple 处理；<strong>最终价格以购买时 App Store 展示为准</strong>。应用内参考标价（USD）如下：</li>
       </ul>
       <ul>
@@ -141,8 +202,11 @@
       </ul>
       <ul>
         <li><strong>1 积分 = 1 次</strong>完整多智能体分析（成功出报告计 1 次；仅同步/选股/查看历史不计）。</li>
-        <li>自动续期订阅的管理与取消请在系统「设置 → Apple ID → 订阅」中操作。</li>
-        <li>退款申请应遵循 Apple 的退款政策与流程；个人开发者无法直接操作 Apple 支付退款。</li>
+        <li>自动续期订阅的管理与取消请在系统「设置 → Apple ID → 订阅」中操作。取消后，当前已付费周期内的权益通常可继续使用至该周期结束，后续不再自动续订。</li>
+        <li><strong>自动续期订阅退款：</strong>应遵循 Apple 的退款政策与流程（如
+          <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Apple Report a Problem</a>）；
+          运营者及开发者无法直接操作 App Store 退款，亦不在 Apple 程序之外另行退款。Apple 若核准，退还金额通常不超过该笔订阅交易的实付价款。</li>
+        <li><strong>一次性消耗型积分包：</strong>购买成功并向您账户发放积分后，相关数字内容即视为已交付。积分一经使用即不可恢复。对已交付或已消耗的积分，运营者及开发者<strong>不提供退款、折现或现金补偿</strong>。您仍可通过 Apple 渠道提出退款请求，是否核准及金额以 Apple 政策及适用法律为准；运营者无法代为办理。</li>
         <li>积分/额度规则以应用内说明及本条款为准；滥用、欺诈可能导致暂停服务。</li>
       </ul>
       <div class="en">
@@ -150,7 +214,10 @@
           Reference USD list prices (App Store display price prevails): Basic <strong>$11.99</strong>/mo (4 analyses),
           Deep Research <strong>$29.99</strong>/mo (10 + PDF), Annual <strong>$249.99</strong>/yr (120 + PDF);
           credit packs <strong>$2.99</strong> / <strong>$11.99</strong> / <strong>$27.99</strong> (1 / 4 / 10).
-          One credit = one full multi-agent analysis. Manage or cancel auto-renewable subscriptions in iOS Settings → Apple ID → Subscriptions. Refunds follow Apple’s policies.
+          One credit = one full multi-agent analysis. Manage or cancel auto-renewable subscriptions in iOS Settings → Apple ID → Subscriptions.
+          Subscription refunds follow Apple’s policies only; the operator does not refund outside Apple’s process.
+          Consumable credit packs are considered delivered when credits are granted; used credits are non-restorable; the operator does not refund delivered or consumed credits outside Apple’s process.
+          Apple-approved refunds are typically limited to the amount actually paid for that transaction.
         </p>
       </div>
     </div>
@@ -158,16 +225,18 @@
     <div class="card">
       <h2>5. AI 服务器与网络服务 / AI Server</h2>
       <p>
-        AI 相关分析默认受「AI 服务器」开关控制。关闭时，相关云端分析不可用。
-        开启即表示您同意：为完成分析，必要请求数据将经 <strong>WalletExplain 网关</strong>传输至
-        <strong>OpenAI</strong> 服务商处理（仅传输研究所需的最小必要信息；详见
+        AI 相关分析默认受「AI 服务器」开关及应用内「AI 数据共享」授权控制。关闭 AI 服务器或选择不允许数据共享时，相关云端分析不可用。
+        开启并允许即表示您同意：为完成分析，必要请求数据将<strong>直接发送至 OpenAI 官方接口</strong>（api.openai.com）处理（仅传输研究所需的最小必要信息，<strong>不经第三方 LLM 网关转发</strong>；详见
         <a href="./privacy.html">隐私政策</a>）。
-        网络、WalletExplain 网关或 OpenAI 服务故障可能导致分析失败或延迟，许可方将在合理范围内尽力维护，但不保证不中断。
+        研究任务编排可由运营者部署的分析引擎（如 <code>api.walletexplain.com/ushka</code>）处理；大模型调用仍直连 OpenAI。
+        网络、分析引擎或 OpenAI 服务故障可能导致分析失败或延迟，许可方将在合理范围内尽力维护，但不保证不中断；亦不因此向您承担赔偿或补偿责任（Apple 退款程序除外且由 Apple 处理）。
       </p>
       <div class="en">
         <p>
-          When AI Server is enabled, necessary analysis request data is transmitted via the
-          <strong>WalletExplain gateway</strong> to <strong>OpenAI</strong>. Service outages of the network, gateway, or OpenAI may cause failures or delays.
+          When AI Server is enabled and you allow AI data sharing, necessary analysis request data is sent
+          <strong>directly to OpenAI</strong> (api.openai.com)—not via a third-party LLM gateway.
+          An analysis engine (e.g. api.walletexplain.com/ushka) may orchestrate tasks; LLM calls remain direct to OpenAI.
+          Network, engine, or OpenAI outages may cause failures or delays; no compensation except Apple-processed refunds where applicable.
         </p>
       </div>
     </div>
@@ -183,20 +252,22 @@
     </div>
 
     <div class="card">
-      <h2>7. 责任限制（保护个人开发者）/ Limitation of Liability</h2>
+      <h2>7. 责任限制 / Limitation of Liability</h2>
       <p>
         在适用法律允许的最大范围内：
       </p>
       <ul>
-        <li>许可方（个人开发者）及协助其运营所必需的服务提供方，对因使用或无法使用 USHKA 产生的任何间接、附带、特殊、惩罚性、后果性损害（包括利润、数据、商誉损失）不承担责任，即使已被告知可能性；</li>
-        <li>就本应用引起的全部索赔，许可方承担的累计责任上限不超过您在索赔发生前十二（12）个月内就 USHKA 向 Apple 实际支付的金额；若为免费使用，则上限为人民币 100 元或当地法律允许的最低限额；</li>
+        <li>运营者、许可方及开发者（含同一自然人经营者）及协助其运营所必需的服务提供方，对因使用或无法使用 USHKA 产生的任何直接、间接、附带、特殊、惩罚性、后果性损害（包括利润、数据、商誉损失）<strong>不承担责任</strong>，即使已被告知可能性；</li>
+        <li>运营者及开发者<strong>不提供任何赔偿、补偿、退款</strong>（Apple 法定/政策退款程序除外且由 Apple 处理）或其他金钱给付；</li>
+        <li>就本应用引起的全部索赔，在法律仍要求承担一定责任且无法完全排除时，许可方承担的累计责任上限不超过您在索赔发生前十二（12）个月内就 USHKA 向 Apple 实际支付的金额；若为免费使用，则上限为人民币 100 元或当地法律允许的最低限额；</li>
         <li>部分司法辖区不允许排除某些担保或限制责任，此时上述限制在法律允许的范围内适用；</li>
-        <li>您理解个人开发者资源有限，服务可能变更、中断或停止，许可方将努力提前告知重大变更，但不保证永久运营。</li>
+        <li>您理解服务可能变更、中断或停止，许可方将努力提前告知重大变更，但不保证永久运营。</li>
       </ul>
       <div class="en">
         <p>
-          To the maximum extent permitted by law, the individual developer’s aggregate liability is limited to amounts you paid for USHKA via Apple in the 12 months before the claim
-          (or a minimal statutory amount if free). No liability for indirect or consequential damages. Some jurisdictions do not allow certain limitations.
+          To the maximum extent permitted by law, the operator and developer assume <strong>no liability</strong> and provide no compensation or refunds except refunds approved and processed by Apple.
+          Where liability cannot be fully excluded, aggregate liability is limited to amounts you paid for USHKA via Apple in the 12 months before the claim
+          (or a minimal statutory amount if free). Some jurisdictions do not allow certain limitations.
         </p>
       </div>
     </div>
@@ -238,24 +309,48 @@
     <div class="card">
       <h2>11. 与 Apple 相关条款 / Apple-Required Terms</h2>
       <ul>
-        <li>本协议由您与许可方（个人开发者）缔结，而非与 Apple 缔结；Apple 不对 USHKA 及内容负责。</li>
-        <li>维护与支持由许可方负责，而非 Apple。</li>
-        <li>若 USHKA 未能符合任何适用保证，您可通知 Apple，Apple 可能退还购买价格（如适用）；在法律允许范围内，Apple 对 USHKA 无其他保证义务。</li>
+        <li>本协议由您与许可方（温岭市新河壹嘉软件开发工作室（个体工商户）；其经营者与 Apple Developer Program 个人会员账户持有人为同一自然人）缔结，而非与 Apple 缔结；Apple 不对 USHKA 及内容负责。</li>
+        <li>维护与支持由许可方负责，而非 Apple。支持邮箱：<a href="mailto:support@walletexplain.com">support@walletexplain.com</a>。</li>
+        <li>若 USHKA 未能符合任何适用保证，您可通知 Apple，Apple 可能退还购买价格（如适用）；在法律允许范围内，Apple 对 USHKA 无其他保证义务。运营者及开发者不在 Apple 程序之外另行退款或赔偿。</li>
         <li>Apple 无义务处理您或第三方就 USHKA 提出的任何索赔（含产品责任、法规合规、消费者保护、知识产权侵权索赔等）。</li>
         <li>您声明并保证：（i）您不位于受美国政府禁运的国家/地区，亦不在美国政府禁止名单中；（ii）您不会将 USHKA 用于法律禁止的目的。</li>
       </ul>
+      <div class="en">
+        <p>
+          This EULA is between you and the licensor (sole proprietorship; Apple Developer individual account holder is the same natural person), not Apple.
+          Maintenance and support are provided by the licensor, not Apple. Apple may refund the purchase price if applicable warranties fail; the operator does not refund outside Apple’s process.
+        </p>
+      </div>
     </div>
 
     <div class="card">
       <h2>12. 联系 / Contact</h2>
       <p>
+        运营主体 / 许可方：温岭市新河壹嘉软件开发工作室（个体工商户）<br />
+        Apple 上架：Apple Developer Program 个人会员；个人开发者账户持有人与前述个体工商户经营者为同一自然人<br />
         邮箱：<a href="mailto:support@walletexplain.com">support@walletexplain.com</a><br />
-        隐私政策：<a href="./privacy.html">privacy.html</a>
+        隐私政策：<a href="./privacy.html">privacy.html</a><br />
+        技术支持：<a href="./support.html">support.html</a><br />
+        本页：<code>https://walletexplain.github.io/ushka-legal/eula.html</code><br />
+        分析引擎相关域名：api.walletexplain.com（研究编排；LLM 直连 OpenAI）
       </p>
+      <p class="muted">
+        本协议中的「我们」「运营者」「许可方」「开发者」均指上述主体及其同一自然人经营者。
+        <strong>同意全部条款请继续使用本 App；不同意请勿使用并请卸载。</strong>
+        在法律允许的最大范围内，运营者及开发者<strong>不承担任何责任，亦不提供任何赔偿或补偿</strong>（Apple 退款程序除外且由 Apple 处理）。
+      </p>
+      <div class="en">
+        <p>
+          Operator / licensor: Wenling Xinhe Yijia Software Development Studio (sole proprietorship).<br />
+          Email: support@walletexplain.com<br />
+          If you agree, continue using the App; if you disagree, do not use it. To the maximum extent permitted by law, the operator and developer assume no liability except Apple-processed refunds.
+        </p>
+      </div>
     </div>
 
     <footer>
-      © 2026 USHKA · Individual developer (China). Not investment advice.
+      © 2026 温岭市新河壹嘉软件开发工作室（个体工商户） · USHKA. Not investment advice.
+      See also <a href="./privacy.html">Privacy</a> and <a href="./support.html">Support</a>.
     </footer>
   </div>
 </body>
